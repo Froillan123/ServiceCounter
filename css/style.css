@@ -645,6 +645,7 @@ form .input-box
 	#content main .table-data .todo .todo-list {
 		min-width: 420px;
 	}
+}
 
 	@media(max-width: 557px)
 	{
@@ -660,7 +661,31 @@ form .input-box
 		{
 			display: block;
 			width: 100%;
+			border-radius: .5rem;
+		}
+		.content-table tbody td::before
+		{
+			content: attr(data-cell) ": ";
+			font-weight: 600;
+			font-size: 1.8rem;
+			color: var(--black);
 		}
 
-	}
+		.content-table tbody td:nth-child(odd)
+		{
+			padding-top:  1.5rem;
+			padding-bottom: 1.5rem;
+			background: var(--light);
+		}
+		.content-table tbody td:nth-child(even)
+		{
+			padding-top:  1.5rem;
+			padding-bottom: 1.5rem;
+			background: var(--grey);
+		}
+		#content nav .bx.bx-menu
+		{
+			display: none;
+		}
+	
 }
