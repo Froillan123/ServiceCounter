@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Team</title>
+
+    <link rel="stylesheet" href="css/style.css">
+    <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <style>
+        #content main .box-info {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+	grid-gap: 24px;
+	margin-top: 36px;
+}
+#content main .box-info li {
+	padding: 24px;
+	background: var(--light);
+	border-radius: 20px;
+	display: flex;
+	align-items: center;
+	grid-gap: 24px;
+}
+#content main .box-info li .bx {
+	width: 80px;
+	height: 80px;
+	border-radius: 10px;
+	font-size: 36px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+    background: var(--light-blue);
+    color: var(--blue);
+}
+
+#content main .box-info li .text h3 {
+	font-size: 24px;
+	font-weight: 600;
+	color: var(--dark);
+}
+#content main .box-info li .text p {
+	color: var(--dark);	
+}
+
+#content main .table-data {
+	display: flex;
+	flex-wrap: wrap;
+	grid-gap: 24px;
+	margin-top: 24px;
+	width: 100%;
+	color: var(--dark);
+}
+#content main .table-data > div {
+	border-radius: 20px;
+	background: var(--light);
+	padding: 24px;
+	overflow-x: auto;
+}
+#content main .table-data .head {
+	display: flex;
+	align-items: center;
+	grid-gap: 16px;
+	margin-bottom: 24px;
+}
+#content main .table-data .head h3 {
+	margin-right: auto;
+	font-size: 24px;
+	font-weight: 600;
+}
+#content main .table-data .head .bx {
+	cursor: pointer;
+}
+
+#content main .table-data .team {
+	flex-grow: 1;
+	flex-basis: 500px;
+}
+#content main .table-data .team table {
+	width: 100%;
+	border-collapse: collapse;
+}
+#content main .table-data .team table th {
+	padding-bottom: 12px;
+	font-size: 1.8rem;
+	text-align: left;
+    font-weight: 400;
+	border-bottom: 1px solid var(--grey);
+}
+#content main .table-data .team table td {
+	padding: 16px 0;
+    font-size: 1.8rem;
+}
+#content main .table-data .team table tr td:first-child {
+	display: flex;
+	align-items: center;
+	grid-gap: 12px;
+	padding-left: 6px;
+}
+#content main .table-data .team table td img {
+	width: 36px;
+	height: 36px;
+	border-radius: 50%;
+	object-fit: cover;
+}
+#content main .table-data .team table tbody tr:hover {
+	background: var(--grey);
+}
+#content main .table-data .team table tr td .counter {
+	font-size: 1.3rem;
+	padding: 6px 16px;
+	color: var(--light);
+	border-radius: 20px;
+	font-weight: 500;
+}
+#content main .table-data .team table tr td .counter.c1 {
+	background: var(--blue);
+}
+#content main .table-data .team table tr td .counter.c2 {
+	background: var(--yellow);
+}
+#content main .table-data .team table tr td .counter.c3 {
+	background: var(--orange);
+}
+
+    </style>
+</head>
+<body>
+
+    <section id="sidebar">
+		<a href="#" class="brand">
+			<i class='bx bxs-bank'></i>
+			<span class="text" style="font-weight: 400;">Service Counter</span>
+		</a>
+		<ul class="side-menu top">
+			<li>
+				<a href="index.html">
+					<i class='bx bxs-bank'></i>
+					<span class="text">Counter</span>
+				</a>
+			</li>
+			<li>
+				<a href="viewcustomer.html">
+					<i class='bx bxs-user-pin' ></i>
+					<span class="text">View Customer</span>
+				</a>
+			</li>
+			<li>
+				<a href="graph.html">
+					<i class='bx bx-line-chart'></i>
+					<span class="text">Customer Graph</span>
+				</a>
+			</li>
+		
+			<li class="active">
+				<a href="team.html">
+					<i class='bx bxs-group' ></i>
+					<span class="text">Team</span>
+				</a>
+			</li>
+		</ul>
+	</section>
+
+    <section id="content">
+		<!-- NAVBAR -->
+		<nav>
+			<i class='bx bx-menu' ></i>
+			<a href="#" class="nav-link">Categories</a>
+			<form action="#">
+				<div class="form-input">
+					<input type="search" placeholder="Search...">
+					<button type="submit" class="search-btn"><i class='bx bx-search' ></i></button>
+				</div>
+			</form>
+			<input type="checkbox" id="switch-mode" hidden>
+			<label for="switch-mode" class="switch-mode"></label>
+		</nav>
+
+        <main>
+			<div class="head-title">
+				<div class="left">
+					<h1></h1>
+					<ul class="breadcrumb">
+						<li>
+							<a href="#">Counter Service</a>
+						</li>
+						<li><i class='bx bx-chevron-right' ></i></li>
+						<li>
+							<a class="active" href="#">Team</a>
+                            
+						</li>
+                        <li>
+
+                        </li>
+					</ul>
+				</div>	
+                
+                
+			</div>
+            <ul class="box-info">
+				<li>
+					<i class='bx bx-data'></i>
+					<span class="text">
+                        <p>Counter 1 Served</p>
+						<h3>1000</h3>
+					</span>
+				</li>
+				<li>
+					<i class='bx bx-data'></i>
+					<span class="text">
+                        <p>Counter 2 Served</p>
+						<h3>1000</h3>
+					</span>
+				</li>
+				<li>
+					<i class='bx bx-data'></i>
+					<span class="text">
+                        <p>Counter 3 Served</p>
+						<h3>1000</h3>
+					</span>
+				</li>
+			</ul>
+
+            <div class="table-data">
+				<div class="team">
+			
+					<table>
+						<thead>
+							<tr>
+								<th>Team Members</th>
+								<th>Profit Income</th>
+								<th>Assign Counter</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>
+									<img src="images/profile.jpg">
+									<p>John Doe</p>
+								</td>
+								<td>💸&nbsp;$5,000.00</td>
+								<td><span class="counter c1">Counter 1</span></td>
+							</tr>
+							<tr>
+								<td>
+									<img src="images/profile.jpg">
+									<p>Kim The Great</p>
+								</td>
+								<td>💸&nbsp;$5,500.00</td>
+								<td><span class="counter c3">Counter 3</span></td>
+							</tr>
+							<tr>
+								<td>
+									<img src="images/profile.jpg">
+									<p>Kimmy</p>
+								</td>
+								<td>💸&nbsp;$10,000.00</td>
+								<td><span class="counter c2">Counter 2</span></td>
+							</tr>
+							<tr>
+								<td>
+									<img src="images/profile.jpg">
+									<p>Hacker</p>
+								</td>
+								<td>💸&nbsp;$4,000.00</td>
+								<td><span class="counter c3">Counter 3</span></td>
+							</tr>
+			
+						</tbody>
+					</table>
+				</div>
+
+        </main>
+    </section>
+    
+</body>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+<script src="js/script.js"></script>
+</html>

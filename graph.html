@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customer Graph</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+
+    <section id="sidebar">
+		<a href="#" class="brand">
+			<i class='bx bxs-bank'></i>
+			<span class="text" style="font-weight: 400;">Service Counter</span>
+		</a>
+		<ul class="side-menu top">
+			<li>
+				<a href="index.html">
+					<i class='bx bxs-bank'></i>
+					<span class="text">Counter</span>
+				</a>
+			</li>
+			<li>
+				<a href="viewcustomer.html">
+					<i class='bx bxs-user-pin' ></i>
+					<span class="text">View Customer</span>
+				</a>
+			</li>
+			<li class="active">
+				<a href="graph.html">
+					<i class='bx bx-line-chart'></i>
+					<span class="text">Customer Graph</span>
+				</a>
+			</li>
+		
+			<li>
+				<a href="team.html">
+					<i class='bx bxs-group' ></i>
+					<span class="text">Team</span>
+				</a>
+			</li>
+		</ul>
+	</section>
+
+    <section id="content">
+		<!-- NAVBAR -->
+		<nav>
+			<i class='bx bx-menu' ></i>
+			<a href="#" class="nav-link">Categories</a>
+			<form action="#">
+				<div class="form-input">
+					<input type="search" placeholder="Search...">
+					<button type="submit" class="search-btn"><i class='bx bx-search' ></i></button>
+				</div>
+			</form>
+			<input type="checkbox" id="switch-mode" hidden>
+			<label for="switch-mode" class="switch-mode"></label>
+		</nav>
+
+        <main>
+			<div class="head-title">
+				<div class="left">
+					<h1></h1>
+					<ul class="breadcrumb">
+						<li>
+							<a href="#">Customer</a>
+						</li>
+						<li><i class='bx bx-chevron-right' ></i></li>
+						<li>
+							<a class="active" href="#">Graph</a>
+                            <li><i class='bx bx-chevron-right' ></i></li>
+						</li>
+                        <li>
+                            
+                            <a href="">Example</a>
+                        </li>
+					</ul>
+				</div>				
+			</div>
+            
+                <canvas id="barGraph"></canvas>
+          
+
+        </main>
+
+    </section>
+    
+</body>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+<script src="js/script.js"></script>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const data = {
+            labels: ["John Doe", "Jane Smith", "Bob Johnson", "Alice Brown", "Charlie Wilson", "Eve Davis", "Michael White", "Olivia Black", "David Green", "Sophia Grey"],
+            datasets: [
+                {
+                    label: "Priority Number",
+                    data: [3, 1, 5, 2, 4, 1, 5, 3, 4, 2],
+                    backgroundColor: [
+                        'rgba(255, 99, 132, 0.5)',
+                        'rgba(54, 162, 235, 0.5)',
+                        'rgba(255, 206, 86, 0.5)',
+                        'rgba(75, 192, 192, 0.5)',
+                        'rgba(153, 102, 255, 0.5)',
+                        'rgba(255, 159, 64, 0.5)',
+                        'rgba(128, 0, 128, 0.5)',
+                        'rgba(0, 128, 0, 0.5)',
+                        'rgba(128, 128, 128, 0.5)',
+                        'rgba(255, 140, 0, 0.5)',
+                    ],
+                    borderColor: [
+                        'rgba(255, 99, 132, 1)',
+                        'rgba(54, 162, 235, 1)',
+                        'rgba(255, 206, 86, 1)',
+                        'rgba(75, 192, 192, 1)',
+                        'rgba(153, 102, 255, 1)',
+                        'rgba(255, 159, 64, 1)',
+                        'rgba(128, 0, 128, 1)',
+                        'rgba(0, 128, 0, 1)',
+                        'rgba(128, 128, 128, 1)',
+                        'rgba(255, 140, 0, 1)',
+                    ],
+                    borderWidth: 1,
+                },
+            ],
+        };
+
+        const options = {
+            scales: {
+                y: {
+                    beginAtZero: true,
+                },
+            },
+            responsive: true, // Make the chart responsive
+            maintainAspectRatio: false, // Don't maintain aspect ratio
+        };
+
+        const ctx = document.getElementById("barGraph").getContext("2d");
+
+        const myChart = new Chart(ctx, {
+            type: "bar",
+            data: data,
+            options: options,
+        });
+    });
+</script>
+</html>

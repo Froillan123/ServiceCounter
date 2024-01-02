@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>View Customer</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+</head>
+<body>
+    <section id="sidebar">
+		<a href="#" class="brand">
+			<i class='bx bxs-bank'></i>
+			<span class="text" style="font-weight: 400;">Service Counter</span>
+		</a>
+		<ul class="side-menu top">
+			<li>
+				<a href="index.html">
+					<i class='bx bxs-bank'></i>
+					<span class="text">Counter</span>
+				</a>
+			</li>
+			<li class="active">
+				<a href="viewcustomer.html">
+					<i class='bx bxs-user-pin' ></i>
+					<span class="text">View Customer</span>
+				</a>
+			</li>
+			<li>
+				<a href="graph.html">
+					<i class='bx bx-line-chart'></i>
+					<span class="text">Customer Graph</span>
+				</a>
+			</li>
+		
+			<li>
+				<a href="team.html">
+					<i class='bx bxs-group' ></i>
+					<span class="text">Team</span>
+				</a>
+			</li>
+		</ul>
+	</section>
+
+    <section id="content">
+		<!-- NAVBAR -->
+		<nav>
+			<i class='bx bx-menu' ></i>
+			<a href="#" class="nav-link">Categories</a>
+			<form action="#">
+				<div class="form-input">
+					<input type="search" placeholder="Search...">
+					<button type="submit" class="search-btn"><i class='bx bx-search' ></i></button>
+				</div>
+			</form>
+			<input type="checkbox" id="switch-mode" hidden>
+			<label for="switch-mode" class="switch-mode"></label>
+		</nav>
+
+        <main>
+			<div class="head-title">
+				<div class="left">
+					<h1></h1>
+					<ul class="breadcrumb">
+						<li>
+							<a href="#">Customer</a>
+						</li>
+						<li><i class='bx bx-chevron-right' ></i></li>
+						<li>
+							<a class="active" href="#">View Customer</a>
+                            <li><i class='bx bx-chevron-right' ></i></li>
+						</li>
+                        <li>
+                            
+                            <a href="">Example</a>
+                        </li>
+					</ul>
+				</div>				
+			</div>
+
+            <section class="viewcustomer" id="viewcustomer">
+                <div id="close-menu" class="fas fa-times"></div>
+                <div class="customersview">
+                    <table class="content-table" id="customers-table">
+                        <thead>
+                            <tr>
+                                <th>Name Of Customer</th>
+                                <th>Prio No.</th>
+                                <th>Age</th>
+                                <th>Counter</th>
+                            </tr>
+                        </thead>
+                        <tbody id="customers-table-body">
+                            <!-- Example Data -->
+                            <tr>
+                                <td data-cell="Name Of Customer">John Doe</td>
+                                <td data-cell="Prio No.">3</td>
+                                <td data-cell="Age">25</td>
+                                <td data-cell="Counter">Counter 1</td>
+                            </tr>
+                            <tr>
+                                <td data-cell="Name Of Customer">Jane Smith</td>
+                                <td data-cell="Prio No.">1</td>
+                                <td data-cell="Age">30</td>
+                                <td data-cell="Counter">Counter 2</td>
+                            </tr>
+                            <tr>
+                                <td data-cell="Name Of Customer">Bob Johnson</td>
+                                <td data-cell="Prio No.">5</td>
+                                <td data-cell="Age">22</td>
+                                <td data-cell="Counter">Counter 3</td>
+                            </tr>
+                            <tr>
+                                <td data-cell="Name Of Customer">Alice Brown</td>
+                                <td data-cell="Prio No.">2</td>
+                                <td data-cell="Age">28</td>
+                                <td data-cell="Counter">Counter 1</td>
+                            </tr>
+                            <tr>
+                                <td data-cell="Name Of Customer">Charlie Wilson</td>
+                                <td data-cell="Prio No.">4</td>
+                                <td data-cell="Age">35</td>
+                                <td data-cell="Counter">Counter 2</td>
+                            </tr>
+                            <tr>
+                                <td data-cell="Name Of Customer">Eve Davis</td>
+                                <td data-cell="Prio No.">1</td>
+                                <td data-cell="Age">27</td>
+                                <td data-cell="Counter">Counter 3</td>
+                            </tr>
+                            <tr>
+                                <td data-cell="Name Of Customer">Michael White</td>
+                                <td data-cell="Prio No.">5</td>
+                                <td data-cell="Age">32</td>
+                                <td data-cell="Counter">Counter 1</td>
+                            </tr>
+                            <tr>
+                                <td data-cell="Name Of Customer">Olivia Black</td>
+                                <td data-cell="Prio No.">3</td>
+                                <td data-cell="Age">24</td>
+                                <td data-cell="Counter">Counter 2</td>
+                            </tr>
+                            <tr>
+                                <td data-cell="Name Of Customer">David Green</td>
+                                <td data-cell="Prio No.">4</td>
+                                <td data-cell="Age">29</td>
+                                <td data-cell="Counter">Counter 3</td>
+                            </tr>
+                            <tr>
+                                <td data-cell="Name Of Customer">Sophia Grey</td>
+                                <td data-cell="Prio No.">2</td>
+                                <td data-cell="Age">26</td>
+                                <td data-cell="Counter">Counter 1</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>            
+        </main>
+
+
+    </section>
+</body>
+
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+<script src="js/script.js"></script>
+</html>

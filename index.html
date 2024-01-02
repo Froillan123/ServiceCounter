@@ -13,30 +13,30 @@
     <section id="sidebar">
 		<a href="#" class="brand">
 			<i class='bx bxs-bank'></i>
-			<span class="text">Service Counter</span>
+			<span class="text" style="font-weight: 400;">Service Counter</span>
 		</a>
 		<ul class="side-menu top">
 			<li class="active">
-				<a href="#">
+				<a href="index.html">
 					<i class='bx bxs-bank'></i>
 					<span class="text">Counter</span>
 				</a>
 			</li>
 			<li>
-				<a href="#">
+				<a href="viewcustomer.html">
 					<i class='bx bxs-user-pin' ></i>
 					<span class="text">View Customer</span>
 				</a>
 			</li>
 			<li>
-				<a href="#">
+				<a href="graph.html">
 					<i class='bx bx-line-chart'></i>
 					<span class="text">Customer Graph</span>
 				</a>
 			</li>
 		
 			<li>
-				<a href="#">
+				<a href="team.html">
 					<i class='bx bxs-group' ></i>
 					<span class="text">Team</span>
 				</a>
@@ -75,61 +75,70 @@
 						</li>
 					</ul>
 				</div>
+
 				
 			</div>
 
+
             <ul class="box-info">
+				<div class="counter">
                 <li>
                     <span class="text">
-                        <p>Counter 1</p>
-                        <div class="queue"></div>
+                        <center><p>Counter 1</p></center>
+                        <div id="counter1Boxes"></div>
                     </span>
                 </li>
+				</div>
                 <li>
+					<div class="counter">
                     <span class="text">
-                        <p>Counter 2</p>
-                        <div class="queue"></div>
+                        <center><p>Counter 2</p></center>
+                        <div id="counter2Boxes"></div>
                     </span>
                 </li>
+			</div>
                 <li>
+					<div class="counter">
                     <span class="text">
-                        <p>Counter 3</p>
-                        <div class="queue"></div>
+                        <center><p>Counter 3</p></center>
+                        <div id="counter3Boxes"></div>
                     </span>
                 </li>
+			</div>
             </ul>
             
-            
             <div class="buttons">
-                <button class="button" id="queueSection1">Next Customer</button> 
-                <button class="button" id="queueSection2">Next Customer</button> 
-                <button class="button" id="queueSection3">Next Customer</button> 
+                <button class="button" id="queueSection1">Next Customer</button> <!--Dequeue Counter 1-->
+                <button class="button" id="queueSection2">Next Customer</button> <!--Dequeue Counter 2-->
+                <button class="button" id="queueSection3">Next Customer</button> <!--Dequeue Counter 3-->
             </div>
 
 
             <div class="table-data">
                 <div class="order">
                     <div class="head">
-                        <h1>Waiting Queue</h1>
-                        <div class="container">
-                            <div id="queue-box"></div>
-                        </div>
-                        <div class="buttonCounter">
-                            <button type="button" class="btn" id="toCounter1">To Counter1</button>
-                            <button type="button" class="btn" id="toCounter2">To Counter2</button>
-                            <button type="button" class="btn" id="toCounter3">To Counter3</button>
-                        </div>
                     </div>
-                    <div class="addcustomer">
-                        <!-- Ensure that your JavaScript file is loaded before this script -->
-                        <button class="button" onclick="addCustomer()">Add Customer</button>
-                    </div>
+					<form class="grid-item form">
+						<h2>Enter Customer Information</h2>
+						<div class="input-box">   
+							<h3>Enter Your name</h3>
+							<input type="text" name="name" placeholder="Name:" id="name" required>
+			
+							<h3>Enter Your Age</h3>
+							<input type="number" name="" placeholder="age:" id="age" required>
+
+							<h3>Add Priority:</h3>
+							<input type="text" name="" id="Prio" max="5" placeholder="1-5">
+						</form>
+
+						<div class="buttonCounter">
+							<button type="button" class="btn" id="toCounter1">Counter1</button>
+							<button type="button" class="btn" id="toCounter2">Counter2</button>
+							<button type="button" class="btn" id="toCounter3">Counter3</button>
+                        </div>
                 </div>
-            </div>
 		</main>
-
     </section>
-
 
 
 
